@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import Header from './Header';
+import ProjectsGrid from './ProjectsGrid';
 import withRoot from '../withRoot';
 
 class App extends Component {
@@ -7,6 +8,7 @@ class App extends Component {
     return (
       <Fragment>
         <Header />
+        <ProjectsGrid />
       </Fragment>
     );
   }
