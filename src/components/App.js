@@ -26,6 +26,11 @@ class App extends Component {
       [] of {}
       id, name, created_at, html_url
     */
+    .then(repos => {
+      const rs = ['arcade-game', 'goals-keeper', 'Mobile-Flashcards', 'myReads',
+        'optimization-project', 'pomodoro-clock', 'readable'];
+      return repos.filter(repo => rs.includes(repo.name));
+    })
     .then(repos => repos.map(repo => ({
       id: repo.id,
       name: repo.name,
