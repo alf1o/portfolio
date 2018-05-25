@@ -3,25 +3,18 @@ import PropTypes from 'prop-types';
 import Paper from '@material-ui/core/Paper';
 import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
-import GridListTileBar from '@material-ui/core/GridListTileBar';
 import ListSubheader from '@material-ui/core/ListSubheader';
-import IconButton from '@material-ui/core/IconButton';
-import InfoIcon from '@material-ui/icons/Info';
+import Project from './Project';
 import { withStyles } from '@material-ui/core/styles';
 
 const styles = {
   container: {
     width: '100%',
     height: '100vh',
-    display: 'flex'
+    display: 'flex' // so we can center the list with `margin: auto`
   },
   gridList: {
     flex: 1
-  },
-  project: {
-    // width: '100%',
-    height: '100%',
-    border: '1px solid black'
   }
 };
 /**
@@ -31,7 +24,7 @@ const styles = {
 // TODO: somehow `GridList` gets an inline style of `margin: -2px` so we need to
 // pass `margin: auto 0` inline to override that.
 // Same for `ListSubheader`
-// TODO: `Button` renders a `Link` to <a href={repo.url}>View Code</a>
+// NB: have to render `GridListTile` here rather than in `Project`.
 function ProjectsGrid({ classes, repos }) {
   return (
     <Paper
@@ -56,16 +49,8 @@ function ProjectsGrid({ classes, repos }) {
         </GridListTile>
         {repos.map(repo => (
           <GridListTile key={repo.id}>
-            <div className={classes.project} />
-            <GridListTileBar
-              title={repo.name}
-              titlePosition="top"
-              subtitle={<span>created: {repo.date}</span>}
-              actionIcon={
-                <IconButton>
-                  <InfoIcon />
-                </IconButton>
-              }
+            <Project
+              project={repo}
             />
           </GridListTile>
         ))}
