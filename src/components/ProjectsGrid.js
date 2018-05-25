@@ -9,33 +9,6 @@ import IconButton from '@material-ui/core/IconButton';
 import InfoIcon from '@material-ui/icons/Info';
 import { withStyles } from '@material-ui/core/styles';
 
-const tileData = [
-  {
-    bkgc: 'grey',
-    title: 'Project1',
-    author: 'author',
-    cols: 2
-  },
-  {
-    bkgc: 'grey',
-    title: 'Project2',
-    author: 'author',
-    cols: 2
-  },
-  {
-    bkgc: 'grey',
-    title: 'Project3',
-    author: 'author',
-    cols: 2
-  },
-  {
-    bkgc: 'grey',
-    title: 'Project4',
-    author: 'author',
-    cols: 2
-  }
-];
-
 const styles = {
   container: {
     width: '100%',
@@ -46,7 +19,7 @@ const styles = {
     flex: 1
   },
   project: {
-    width: '100%',
+    // width: '100%',
     height: '100%',
     border: '1px solid black'
   }
@@ -58,19 +31,21 @@ const styles = {
 // TODO: somehow `GridList` gets an inline style of `margin: -2px` so we need to
 // pass `margin: auto 0` inline to override that.
 // Same for `ListSubheader`
-function ProjectsGrid({ classes }) {
+// TODO: `Button` renders a `Link` to <a href={repo.url}>View Code</a>
+function ProjectsGrid({ classes, repos }) {
   return (
     <Paper
       className={classes.container}
     >
       <GridList
+        cols={1}
         spacing={1}
         className={classes.gridList}
         style={{ margin: 'auto 0' }}
       >
         <GridListTile
           key="Subheader"
-          cols={2}
+          cols={1}
           style={{ height: 'auto' }}
         >
           <ListSubheader
@@ -79,13 +54,13 @@ function ProjectsGrid({ classes }) {
             Projects
           </ListSubheader>
         </GridListTile>
-        {tileData.map(tile => (
-          <GridListTile key={tile.title}>
+        {repos.map(repo => (
+          <GridListTile key={repo.id}>
             <div className={classes.project} />
             <GridListTileBar
-              title={tile.title}
+              title={repo.name}
               titlePosition="top"
-              subtitle={<span>by: {tile.author}</span>}
+              subtitle={<span>created: {repo.date}</span>}
               actionIcon={
                 <IconButton>
                   <InfoIcon />
@@ -100,7 +75,8 @@ function ProjectsGrid({ classes }) {
 }
 
 ProjectsGrid.propTypes = {
-  classes: PropTypes.object.isRequired
+  classes: PropTypes.object.isRequired,
+  repos: PropTypes.array.isRequired
 };
 
 export { ProjectsGrid };
