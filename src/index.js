@@ -20,7 +20,7 @@ const repos = {
     url: 'https://github.com/alf1o/goalskeeper',
     icon: 'GK'
   },
-  'Mobile-Flashcards': {
+  'mobile-flashcards': {
     name: 'Mobile Flashcards',
     description: 'Project for Udacity React program. Mobile app built with React'
     + ' Native. Let the user build its own deck of cards and play with it in a'
@@ -29,7 +29,7 @@ const repos = {
     url: 'https://github.com/alf1o/Mobile-Flashcards',
     icon: 'MF'
   },
-  'myReads': {
+  'my-reads': {
     name: 'My Reads',
     description: 'Udacity project for the React program. Web app to keep track'
     + ' of books you read and want to read. Built with React.',

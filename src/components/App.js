@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Header from './Header';
 import ProjectTabs from './ProjectTabs';
 import Project from './Project';
+import Contacts from './Contacts';
 import withRoot from '../withRoot';
 
 class App extends Component {
@@ -16,6 +17,7 @@ class App extends Component {
     return (
       <Fragment>
         <Header />
+        <Contacts />
         <ProjectTabs projects={repos} />
         {repos.map(repo => (
           <Project key={repo.name}
