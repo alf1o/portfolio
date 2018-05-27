@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import Header from './Header';
+import ProjectTabs from './ProjectTabs';
 import withRoot from '../withRoot';
 
 class App extends Component {
@@ -14,6 +15,7 @@ class App extends Component {
     return (
       <Fragment>
         <Header />
+        <ProjectTabs projects={repos} />
       </Fragment>
     );
   }
