@@ -4,6 +4,7 @@ import Header from './Header';
 import ProjectTabs from './ProjectTabs';
 import Project from './Project';
 import Contacts from './Contacts';
+import About from './About';
 import withRoot from '../withRoot';
 
 class App extends Component {
@@ -17,6 +18,7 @@ class App extends Component {
     return (
       <Fragment>
         <Header />
+        <About />
         <Contacts />
         <ProjectTabs projects={repos} />
         {repos.map(repo => (
