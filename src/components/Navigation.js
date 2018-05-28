@@ -4,6 +4,8 @@ import Hidden from '@material-ui/core/Hidden';
 import Drawer from '@material-ui/core/Drawer';
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
 import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemText from '@material-ui/core/ListItemText';
 import Divider from '@material-ui/core/Divider';
 import { withStyles } from '@material-ui/core/styles';
 
@@ -52,7 +54,11 @@ class Navigation extends Component {
       <div>
         <div className={classes.toolbar} />
         <Divider />
-        <List></List>
+        <List>
+          <ListItem>
+            <ListItemText primary="Projects" />
+          </ListItem>
+        </List>
       </div>
     );
 

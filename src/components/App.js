@@ -1,23 +1,26 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import Paper from '@material-ui/core/Paper';
 import Header from './Header';
 import ProjectTabs from './ProjectTabs';
 import Project from './Project';
-import Contacts from './Contacts';
-import About from './About';
 import Navigation from './Navigation';
 import withRoot from '../withRoot';
 import { withStyles } from '@material-ui/core/styles';
 
-const styles = {
+const styles = theme => ({
   container: {
     zIndex: 1,
     width: '100%',
-    display: 'flex',
-    flexWrap: 'wrap'
+    display: 'flex'
+  },
+  tabsContainer: {
+    width: '100%',
+    [theme.breakpoints.up('md')]: {
+      width: 'calc(100% - 240px)' // 240px is the drawer width
+    }
   }
-};
+});
 
 // TODO: fix components width
 class App extends Component {
@@ -30,20 +33,24 @@ class App extends Component {
   render() {
     const { classes, repos } = this.props;
     return (
-      <Paper
-        className={classes.container}
-      >
+      <Fragment>
         <Header />
-        <Navigation />
-        <About />
-        <Contacts />
-        <ProjectTabs projects={repos} />
-        {repos.map(repo => (
-          <Project key={repo.name}
-            project={repo}
-          />
-        ))}
-      </Paper>
+        <Paper
+          className={classes.container}
+        >
+          <Navigation />
+          <Paper
+            className={classes.tabsContainer}
+          >
+            <ProjectTabs projects={repos} />
+            {repos.map(repo => (
+              <Project key={repo.name}
+                project={repo}
+              />
+            ))}
+          </Paper>
+        </Paper>
+      </Fragment>
     );
   }
 }
