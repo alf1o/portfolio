@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/App';
+import { BrowserRouter } from 'react-router-dom';
 // import registerServiceWorker from './registerServiceWorker';
 
 const repos = {
@@ -57,7 +58,9 @@ const repos = {
 };
 
 ReactDOM.render(
-  <App repos={Object.values(repos)} />,
+  <BrowserRouter>
+    <App repos={Object.values(repos)} />
+  </BrowserRouter>,
   document.getElementById('root')
 );
 

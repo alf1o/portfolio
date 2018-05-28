@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
+import { Link } from 'react-router-dom';
 import { withStyles } from '@material-ui/core/styles';
 
 const styles = theme => ({
@@ -14,7 +15,7 @@ const styles = theme => ({
 /**
   Render the tabs for projects navigation.
 */
-// TODO: a `Tab` should be a `Link`
+// TODO: fix click
 class ProjectTabs extends Component {
 
   static propTypes = {
@@ -22,15 +23,28 @@ class ProjectTabs extends Component {
     projects: PropTypes.array.isRequired
   };
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      currentTab: 0
+    };
+    this.changeTab = this.changeTab.bind(this);
+  }
+
+  changeTab(_, value) {
+    this.setState({ currentTab: value });
+  }
+
   render() {
     const { classes, projects } = this.props;
+    const { currentTab } = this.state;
     return (
       <AppBar
         position="static"
       >
         <Tabs
-          value={0}
-          onChange={Function.prototype}
+          value={currentTab}
+          onChange={this.changeTab}
           scrollable={true}
           indicatorColor="primary"
           textColor="primary"
@@ -38,7 +52,9 @@ class ProjectTabs extends Component {
         >
           {projects.map(project => (
             <Tab key={project.name}
-              label={project.name}
+              label={
+                <Link to={project.name}>{project.name}</Link>
+              }
             />
           ))}
         </Tabs>

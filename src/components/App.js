@@ -5,6 +5,8 @@ import Header from './Header';
 import ProjectTabs from './ProjectTabs';
 import Project from './Project';
 import Navigation from './Navigation';
+import ButtonsContainer from './ButtonsContainer';
+import { Route } from 'react-router-dom';
 import withRoot from '../withRoot';
 import { withStyles } from '@material-ui/core/styles';
 
@@ -62,12 +64,18 @@ class App extends Component {
           >
             <ProjectTabs projects={repos} />
             {repos.map(repo => (
-              <Project key={repo.name}
-                project={repo}
+              <Route key={repo.name}
+                path={`/${repo.name}`}
+                render={match => (
+                  <Project
+                    project={repo}
+                  />
+                )}
               />
             ))}
           </Paper>
         </Paper>
+        <ButtonsContainer />
       </Fragment>
     );
   }
