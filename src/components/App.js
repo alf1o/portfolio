@@ -30,15 +30,33 @@ class App extends Component {
     repos: PropTypes.array.isRequired
   };
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      mobileOpen: false
+    };
+    this.handleDrawerToggle = this.handleDrawerToggle.bind(this);
+  }
+
+  handleDrawerToggle() {
+    this.setState(prevState => ({ mobileOpen: !prevState.mobileOpen }));
+  }
+
   render() {
     const { classes, repos } = this.props;
+    const { mobileOpen } = this.state;
     return (
       <Fragment>
-        <Header />
+        <Header
+          onMenuClick={this.handleDrawerToggle}
+        />
         <Paper
           className={classes.container}
         >
-          <Navigation />
+          <Navigation
+            onDrawerSwipe={this.handleDrawerToggle}
+            isOpen={mobileOpen}
+          />
           <Paper
             className={classes.tabsContainer}
           >

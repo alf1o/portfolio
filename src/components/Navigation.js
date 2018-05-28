@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import Hidden from '@material-ui/core/Hidden';
 import Drawer from '@material-ui/core/Drawer';
@@ -33,77 +33,62 @@ const styles = theme => ({
   Use a swipeable drawer for mobile and a permanent drawer otherwise.
 */
 // TODO: gets a list of routes as prop
-class Navigation extends Component {
+function Navigation({ classes, onDrawerSwipe, isOpen }) {
+  const drawer = (
+    <div>
+      <div className={classes.toolbar} />
+      <Divider />
+      <List>
+        <ListItem>
+          <ListItemText primary="Projects" />
+        </ListItem>
+      </List>
+    </div>
+  );
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      mobileOpen: false
-    };
-    this.handleDrawerToggle = this.handleDrawerToggle.bind(this);
-  }
-
-  handleDrawerToggle() {
-    this.setState(prevState => ({ mobileOpen: !prevState.mobileOpen }));
-  }
-
-  render() {
-    const { classes } = this.props;
-
-    const drawer = (
-      <div>
-        <div className={classes.toolbar} />
-        <Divider />
-        <List>
-          <ListItem>
-            <ListItemText primary="Projects" />
-          </ListItem>
-        </List>
-      </div>
-    );
-
-    return (
-      <div className={classes.container}>
-        <Hidden
-          mdUp={true}
+  return (
+    <div className={classes.container}>
+      <Hidden
+        mdUp={true}
+      >
+        <SwipeableDrawer
+          variant="temporary"
+          anchor="left"
+          open={isOpen}
+          onOpen={onDrawerSwipe}
+          onClose={onDrawerSwipe}
+          classes={{
+            paper: classes.drawerPaper
+          }}
+          ModalProps={{
+            keepMounted: true
+          }}
         >
-          <SwipeableDrawer
-            variant="temporary"
-            anchor="left"
-            open={this.state.mobileOpen}
-            onOpen={this.handleDrawerToggle}
-            onClose={this.handleDrawerToggle}
-            classes={{
-              paper: classes.drawerPaper
-            }}
-            ModalProps={{
-              keepMounted: true
-            }}
-          >
-            {drawer}
-          </SwipeableDrawer>
-        </Hidden>
-        <Hidden
-          smDown={true}
-          implementation="css"
+          {drawer}
+        </SwipeableDrawer>
+      </Hidden>
+      <Hidden
+        smDown={true}
+        implementation="css"
+      >
+        <Drawer
+          variant="permanent"
+          open={true}
+          classes={{
+            paper: classes.drawerPaper
+          }}
         >
-          <Drawer
-            variant="permanent"
-            open={true}
-            classes={{
-              paper: classes.drawerPaper
-            }}
-          >
-            {drawer}
-          </Drawer>
-        </Hidden>
-      </div>
-    );
-  }
+          {drawer}
+        </Drawer>
+      </Hidden>
+    </div>
+  );
 }
 
 Navigation.propTypes = {
-  classes: PropTypes.object.isRequired
+  classes: PropTypes.object.isRequired,
+  onDrawerSwipe: PropTypes.func.isRequired,
+  isOpen: PropTypes.bool.isRequired
 };
 
 export { Navigation };
