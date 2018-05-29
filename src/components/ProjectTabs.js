@@ -52,8 +52,10 @@ class ProjectTabs extends Component {
         >
           {projects.map(project => (
             <Tab key={project.name}
+              component={Link}
+              to={project.name}
               label={
-                <Link to={project.name}>{project.name}</Link>
+                project.name
               }
             />
           ))}
