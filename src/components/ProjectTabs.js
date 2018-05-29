@@ -54,9 +54,7 @@ class ProjectTabs extends Component {
             <Tab key={project.name}
               component={Link}
               to={project.name}
-              label={
-                project.name
-              }
+              label={project.name}
             />
           ))}
         </Tabs>

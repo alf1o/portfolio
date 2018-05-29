@@ -13,8 +13,7 @@ import { withStyles } from '@material-ui/core/styles';
 const styles = theme => ({
   container: {
     zIndex: 1,
-    width: '100%',
-    display: 'flex'
+    width: '100%'
   },
   tabsContainer: {
     width: '100%',
@@ -50,7 +49,6 @@ class App extends Component {
         <Header
           onMenuClick={this.handleDrawerToggle}
         />
-        <ProjectTabs projects={repos} />
         <Paper
           className={classes.container}
         >
@@ -61,6 +59,7 @@ class App extends Component {
           <Paper
             className={classes.tabsContainer}
           >
+            <ProjectTabs projects={repos} />
             {repos.map(repo => (
               <Route key={repo.name}
                 path={`/${repo.name}`}

@@ -7,6 +7,7 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import Divider from '@material-ui/core/Divider';
+import { NavLink } from 'react-router-dom';
 import { withStyles } from '@material-ui/core/styles';
 
 const drawerWidth = 240;
@@ -17,33 +18,71 @@ const styles = theme => ({
     overflow: 'hidden',
     position: 'relative',
     display: 'flex',
-    width: drawerWidth
+    width: drawerWidth,
+    [theme.breakpoints.up('md')]: {
+      width: '100%'
+    }
   },
   toolbar: theme.mixins.toolbar,
   drawerPaper: {
     width: drawerWidth,
     [theme.breakpoints.up('md')]: {
-      position: 'relative'
+      position: 'relative',
+      width: '100vw'
+    }
+  },
+  list: {
+    [theme.breakpoints.up('md')]: {
+      display: 'flex',
+      justifyContent: 'space-around'
+    }
+  },
+  links: {
+    [theme.breakpoints.up('md')]: {
+      marginLeft: 0,
+      marginRight: 0,
+      paddingLeft: 0,
+      paddingRight: 0,
+      textAlign: 'center'
     }
   }
 });
+
+const routes = [
+  {
+    name: 'Home',
+    path: '/'
+  },
+  {
+    name: 'About',
+    path: '/about'
+  },
+  {
+    name: 'Contacts',
+    path: '/contacts'
+  }
+];
 
 /**
   Render the side menu for navigation.
   Use a swipeable drawer for mobile and a permanent drawer otherwise.
 */
-// TODO: gets a list of routes as prop
+// TODO: styles for active link
 function Navigation({ classes, onDrawerSwipe, isOpen }) {
   const drawer = (
-    <div>
-      <div className={classes.toolbar} />
-      <Divider />
-      <List>
-        <ListItem>
-          <ListItemText primary="Projects" />
+    <List
+      className={classes.list}
+    >
+      {routes.map(route => (
+        <ListItem key={route.name}
+          component={NavLink}
+          to={route.path}
+          className={classes.links}
+        >
+          <ListItemText primary={route.name} />
         </ListItem>
-      </List>
-    </div>
+      ))}
+    </List>
   );
 
   return (
@@ -64,6 +103,8 @@ function Navigation({ classes, onDrawerSwipe, isOpen }) {
             keepMounted: true
           }}
         >
+          <div className={classes.toolbar} />
+          <Divider />
           {drawer}
         </SwipeableDrawer>
       </Hidden>
@@ -72,6 +113,7 @@ function Navigation({ classes, onDrawerSwipe, isOpen }) {
         implementation="css"
       >
         <Drawer
+          anchor="top"
           variant="permanent"
           open={true}
           classes={{
