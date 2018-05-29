@@ -35,6 +35,9 @@ function getIcon(icon) {
   }
 }
 
+/**
+  Render a button which will open a way of contanct.
+*/
 function ActionButton({ classes, pos, icon, onClick }) {
   return (
     <Button

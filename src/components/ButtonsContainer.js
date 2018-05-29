@@ -7,6 +7,9 @@ const styles = {
 
 };
 
+/**
+  Container for the action buttons.
+*/
 class ButtonsContainer extends Component {
 
   static propTypes = {

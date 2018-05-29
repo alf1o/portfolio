@@ -12,14 +12,26 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import StarIcon from '@material-ui/icons/Star';
+import { withStyles } from '@material-ui/core/styles';
+
+const styles = theme => ({
+  card: {
+    width: '100vw',
+    [theme.breakpoints.up('md')]: {
+      width: '100%'
+    }
+  }
+});
 
 /**
   Render a single project.
 */
 // TODO: open link icon is a `Link`
-function Project({ project }) {
+function Project({ classes, project }) {
   return (
-    <Card>
+    <Card
+      className={classes.card}
+    >
       <CardHeader
         avatar={
           <Avatar
@@ -64,7 +76,9 @@ function Project({ project }) {
 }
 
 Project.propTypes = {
+  classes: PropTypes.object.isRequired,
   project: PropTypes.object.isRequired
 };
 
-export default Project;
+export { Project };
+export default withStyles(styles)(Project);

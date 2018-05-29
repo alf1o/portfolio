@@ -18,9 +18,7 @@ const styles = theme => ({
   },
   tabsContainer: {
     width: '100%',
-    [theme.breakpoints.up('md')]: {
-      width: 'calc(100% - 240px)' // 240px is the drawer width
-    }
+    height: '100%'
   }
 });
 
@@ -52,6 +50,7 @@ class App extends Component {
         <Header
           onMenuClick={this.handleDrawerToggle}
         />
+        <ProjectTabs projects={repos} />
         <Paper
           className={classes.container}
         >
@@ -62,7 +61,6 @@ class App extends Component {
           <Paper
             className={classes.tabsContainer}
           >
-            <ProjectTabs projects={repos} />
             {repos.map(repo => (
               <Route key={repo.name}
                 path={`/${repo.name}`}
