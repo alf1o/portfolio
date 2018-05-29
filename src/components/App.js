@@ -6,22 +6,23 @@ import ProjectTabs from './ProjectTabs';
 import Project from './Project';
 import Navigation from './Navigation';
 import ButtonsContainer from './ButtonsContainer';
-import { Route } from 'react-router-dom';
-import withRoot from '../withRoot';
+import Contacts from './Contacts';
+import About from './About';
+import { Switch, Route } from 'react-router-dom';
 import { withStyles } from '@material-ui/core/styles';
+import withRoot from '../withRoot';
 
 const styles = theme => ({
   container: {
     zIndex: 1,
     width: '100%'
   },
-  tabsContainer: {
+  routesContainer: {
     width: '100%',
     height: '100%'
   }
 });
 
-// TODO: fix components width
 class App extends Component {
 
   static propTypes = {
@@ -57,19 +58,36 @@ class App extends Component {
             isOpen={mobileOpen}
           />
           <Paper
-            className={classes.tabsContainer}
+            className={classes.routesContainer}
           >
-            <ProjectTabs projects={repos} />
-            {repos.map(repo => (
-              <Route key={repo.name}
-                path={`/${repo.name}`}
+            <Switch>
+              <Route
+                path="/contacts"
+                component={Contacts}
+              />
+              <Route
+                path="/about"
+                component={About}
+              />
+              <Route
+                path="/"
                 render={match => (
-                  <Project
-                    project={repo}
-                  />
+                  <div>
+                  <ProjectTabs projects={repos} />
+                  {repos.map(repo => (
+                    <Route key={repo.name}
+                      path={`/${repo.name}`}
+                      render={match => (
+                        <Project
+                          project={repo}
+                        />
+                      )}
+                    />
+                  ))}
+                  </div>
                 )}
               />
-            ))}
+            </Switch>
           </Paper>
         </Paper>
         <ButtonsContainer />

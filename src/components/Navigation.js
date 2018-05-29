@@ -54,12 +54,12 @@ const routes = [
     path: '/'
   },
   {
-    name: 'About',
-    path: '/about'
-  },
-  {
     name: 'Contacts',
     path: '/contacts'
+  },
+  {
+    name: 'About',
+    path: '/about'
   }
 ];
 
