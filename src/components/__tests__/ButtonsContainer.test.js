@@ -1,5 +1,5 @@
 import React from 'react';
-import { ButtonsContainer } from '../ButtonsContainer';
+import ButtonsContainer from '../ButtonsContainer';
 
 describe('`ButtonsContainer`', () => {
   // should have btnsOpen

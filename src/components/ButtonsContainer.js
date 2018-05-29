@@ -1,20 +1,10 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import ActionButton from './ActionButton';
-import { withStyles } from '@material-ui/core/styles';
-
-const styles = {
-
-};
 
 /**
   Container for the action buttons.
 */
 class ButtonsContainer extends Component {
-
-  static propTypes = {
-    classes: PropTypes.object.isRequired
-  };
 
   constructor(props) {
     super(props);
@@ -29,36 +19,43 @@ class ButtonsContainer extends Component {
   }
 
   render() {
-    const { classes } = this.props;
     const { btnsOpen } = this.state;
     const defaultPos = { bottom: 20, right: 15 };
     return (
       <div>
-        <ActionButton
-          pos={
-            btnsOpen
-            ? { bottom: 85, right: 7 }
-            : defaultPos
-          }
-          icon="mail"
-          onClick={this.toggleBtns}
-        /><ActionButton
-          pos={
-            btnsOpen
-            ? { bottom: 73, right: 72 }
-            : defaultPos
-          }
-          icon="linkedin"
-          onClick={this.toggleBtns}
-        /><ActionButton
-          pos={
-            btnsOpen
-            ? { bottom: 9, right: 83 }
-            : defaultPos
-          }
-          icon="github"
-          onClick={this.toggleBtns}
-        />
+        <a href="mailto:alfioparisi.93@gmail.com">
+          <ActionButton
+            pos={
+              btnsOpen
+              ? { bottom: 85, right: 7 }
+              : defaultPos
+            }
+            icon="mail"
+            onClick={this.toggleBtns}
+          />
+        </a>
+        <a href="https://uk.linkedin.com/in/alfio-parisi-2b3baa13b">
+          <ActionButton
+            pos={
+              btnsOpen
+              ? { bottom: 73, right: 72 }
+              : defaultPos
+            }
+            icon="linkedin"
+            onClick={this.toggleBtns}
+          />
+        </a>
+        <a href="https://github.com/alf1o">
+          <ActionButton
+            pos={
+              btnsOpen
+              ? { bottom: 9, right: 83 }
+              : defaultPos
+            }
+            icon="github"
+            onClick={this.toggleBtns}
+          />
+        </a>
         <ActionButton
           pos={defaultPos}
           icon="message"
@@ -69,5 +66,4 @@ class ButtonsContainer extends Component {
   }
 }
 
-export { ButtonsContainer };
-export default withStyles(styles)(ButtonsContainer);
+export default ButtonsContainer;

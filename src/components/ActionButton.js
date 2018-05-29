@@ -5,7 +5,6 @@ import Message from '@material-ui/icons/Message';
 import Work from '@material-ui/icons/Work';
 import Code from '@material-ui/icons/Code';
 import Mail from '@material-ui/icons/Mail';
-import { Link } from 'react-router-dom';
 import { withStyles } from '@material-ui/core/styles';
 
 const styles = theme => ({
