@@ -11,7 +11,8 @@ import withRoot from '../withRoot';
 const styles = theme => ({
   container: {
     zIndex: 1,
-    width: '100%'
+    width: '100%',
+    height: '100vh'
   },
   routesContainer: {
     width: '100%',

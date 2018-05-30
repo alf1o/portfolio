@@ -14,7 +14,8 @@ import { withStyles } from '@material-ui/core/styles';
 
 const styles = theme => ({
   container: {
-    padding: theme.spacing.unit * 2
+    padding: theme.spacing.unit * 2,
+    height: '100%'
   }
 });
 
@@ -39,6 +40,7 @@ function Contacts({ classes }) {
         <ListItem
           component="a"
           href="https://uk.linkedin.com/in/alfio-parisi-2b3baa13b"
+          className={classes.link}
         >
           <ListItemIcon>
             <Work />

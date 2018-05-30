@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import Contacts from './Contacts';
 import About from './About';
@@ -22,7 +22,7 @@ function Routes({ repos, text }) {
       <Route
         path="/"
         render={match => (
-          <div>
+          <Fragment>
             <ProjectTabs projects={repos} />
             {repos.map(repo => (
               <Route key={repo.name}
@@ -34,7 +34,7 @@ function Routes({ repos, text }) {
                 )}
               />
             ))}
-          </div>
+          </Fragment>
         )}
       />
     </Switch>

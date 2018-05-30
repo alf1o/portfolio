@@ -17,6 +17,7 @@ import { withStyles } from '@material-ui/core/styles';
 const styles = theme => ({
   card: {
     width: '100vw',
+    height: '100%',
     [theme.breakpoints.up('md')]: {
       width: '100%'
     }
