@@ -18,12 +18,19 @@ const styles = theme => ({
   card: {
     width: '100vw',
     height: '100%',
+    lineHeight: 1.6,
     [theme.breakpoints.up('md')]: {
       width: '100%'
     }
   },
   avatar: {
     backgroundColor: theme.palette.primary.main
+  },
+  description: {
+    marginBottom: theme.spacing.unit,
+    [theme.breakpoints.down('md')]: {
+      fontSize: theme.typography.fontSize + 1
+    }
   }
 });
 
@@ -61,6 +68,7 @@ function Project({ classes, project }) {
       <CardContent>
         <Typography
           component="p"
+          className={classes.description}
         >
           {project.description}
         </Typography>

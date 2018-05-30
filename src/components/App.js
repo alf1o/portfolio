@@ -20,6 +20,7 @@ const styles = theme => ({
   }
 });
 
+// TODO: make home page
 class App extends Component {
 
   static propTypes = {

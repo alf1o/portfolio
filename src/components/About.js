@@ -8,7 +8,7 @@ import { withStyles } from '@material-ui/core/styles';
 const styles = theme => ({
   container: {
     marginTop: '1%',
-    marginBottom: '10%'
+    marginBottom: '50px'
   },
   imgContainer: {
     float: 'left',
