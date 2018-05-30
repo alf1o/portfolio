@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import List from '@material-ui/core/List';
@@ -8,14 +9,24 @@ import ListItemText from '@material-ui/core/ListItemText';
 import Mail from '@material-ui/icons/Mail';
 import Work from '@material-ui/icons/Work';
 import Code from '@material-ui/icons/Code';
+import Link from '@material-ui/icons/Link';
+import { withStyles } from '@material-ui/core/styles';
+
+const styles = theme => ({
+  container: {
+    padding: theme.spacing.unit * 2
+  }
+});
 
 /**
   Render the contacts view.
 */
 // TODO: style links
-function Contacts() {
+function Contacts({ classes }) {
   return (
-    <Paper>
+    <Paper
+      className={classes.container}
+    >
       <Typography
         variant="subheading"
       >
@@ -25,39 +36,48 @@ function Contacts() {
         You can reach out via:
       </Typography>
       <List>
-        <ListItem>
+        <ListItem
+          component="a"
+          href="https://uk.linkedin.com/in/alfio-parisi-2b3baa13b"
+        >
           <ListItemIcon>
             <Work />
           </ListItemIcon>
           <ListItemText
-            primary={
-              <a href="https://uk.linkedin.com/in/alfio-parisi-2b3baa13b">
-                Linkedin
-              </a>
-            }
+            primary="Linkedin"
           />
+          <ListItemIcon>
+            <Link />
+          </ListItemIcon>
         </ListItem>
-        <ListItem>
+        <ListItem
+          component="a"
+          href="https://github.com/alf1o"
+        >
           <ListItemIcon>
             <Code />
           </ListItemIcon>
           <ListItemText
-            primary={
-              <a href="https://github.com/alf1o">
-                GitHub
-              </a>
-            }
+            primary="GitHub"
           />
+          <ListItemIcon>
+            <Link />
+          </ListItemIcon>
         </ListItem>
         <ListItem>
           <ListItemIcon>
             <Mail />
           </ListItemIcon>
-          <ListItemText primary="alfioparisi.93@gmail.com" />
+          <ListItemText primary="Email: alfioparisi.93@gmail.com" />
         </ListItem>
       </List>
     </Paper>
   );
 }
 
-export default Contacts;
+Contacts.propTypes = {
+  classes: PropTypes.object.isRequired
+};
+
+export { Contacts };
+export default withStyles(styles)(Contacts);
