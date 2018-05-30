@@ -23,7 +23,8 @@ class App extends Component {
 
   static propTypes = {
     classes: PropTypes.object.isRequired,
-    repos: PropTypes.array.isRequired
+    repos: PropTypes.array.isRequired,
+    text: PropTypes.string.isRequired
   };
 
   constructor(props) {
@@ -39,7 +40,7 @@ class App extends Component {
   }
 
   render() {
-    const { classes, repos } = this.props;
+    const { classes, repos, text } = this.props;
     const { mobileOpen } = this.state;
     return (
       <Fragment>
@@ -56,7 +57,10 @@ class App extends Component {
           <Paper
             className={classes.routesContainer}
           >
-            <Routes repos={repos} />
+            <Routes
+              repos={repos}
+              text={text}
+            />
           </Paper>
         </Paper>
         <ButtonsContainer />

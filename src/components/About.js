@@ -6,28 +6,53 @@ import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 
 const styles = theme => ({
+  container: {
+    marginTop: '1%',
+    marginBottom: '10%'
+  },
   imgContainer: {
     float: 'left',
     padding: theme.spacing.unit,
-    marginRight: '10px'
+    marginRight: '10px',
+    textAlign: 'center'
+  },
+  img: {
+    margin: 'auto',
+    width: '22vmin',
+    height: '22vmin'
+  },
+  textContainer: {
+    margin: '0 3%'
+  },
+  text: {
+    lineHeight: 1.6,
+    marginBottom: '15px',
+    [theme.breakpoints.down('md')]: {
+      fontSize: theme.typography.fontSize + 2
+    }
   }
 });
 
 /**
-  Render an avatar and some background text.
+  Render an avatar image and some background text.
 */
 // TODO: text
-function About({ classes }) {
+function About({ classes, text }) {
   return (
-    <Paper>
+    <Paper
+      elevation={0}
+      className={classes.container}
+    >
       <Paper
         className={classes.imgContainer}
+        elevation={0}
       >
         <Avatar
           alt=""
           src=""
           srcSet=""
           sizes=""
+          className={classes.img}
         >
           A
         </Avatar>
@@ -42,39 +67,26 @@ function About({ classes }) {
           London, UK
         </Typography>
       </Paper>
-      <Paper>
-        <Typography
-          component="p"
-        >
-          I am from Ischia, an island in the South of Italy.
-        </Typography>
-        <Typography
-          component="p"
-        >
-          Came to London by the end of 2016.
-        </Typography>
-        <Typography
-          component="p"
-        >
-          Started coding around that time too.
-        </Typography>
-        <Typography
-          component="p"
-        >
-          Took the first Udacity course in March 2017.
-        </Typography>
-        <Typography
-          component="p"
-        >
-          Took the second Udacity course in November 2017.
-        </Typography>
+      <Paper
+        className={classes.textContainer}
+        elevation={0}
+      >
+        {text.split('\n').map((line, i) => (
+          <Typography key={i}
+            component="p"
+            className={classes.text}
+          >
+            {line}
+          </Typography>
+        ))}
       </Paper>
     </Paper>
   );
 }
 
 About.propTypes = {
-  classes: PropTypes.object.isRequired
+  classes: PropTypes.object.isRequired,
+  text: PropTypes.string.isRequired
 };
 
 export { About };

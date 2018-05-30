@@ -6,7 +6,7 @@ import ProjectTabs from './ProjectTabs';
 import Project from './Project';
 import { Switch, Route } from 'react-router-dom';
 
-function Routes({ repos }) {
+function Routes({ repos, text }) {
   return (
     <Switch>
       <Route
@@ -15,7 +15,9 @@ function Routes({ repos }) {
       />
       <Route
         path="/about"
-        component={About}
+        render={match => (
+          <About text={text} />
+        )}
       />
       <Route
         path="/"
@@ -40,7 +42,8 @@ function Routes({ repos }) {
 }
 
 Routes.propTypes = {
-  repos: PropTypes.array.isRequired
+  repos: PropTypes.array.isRequired,
+  text: PropTypes.string.isRequired
 };
 
 export default Routes;
