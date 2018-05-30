@@ -8,7 +8,9 @@ import { withStyles } from '@material-ui/core/styles';
 
 const styles = theme => ({
   tabs: {
-    backgroundColor: theme.palette.background.paper
+    backgroundColor: theme.palette.background.paper,
+    paddingLeft: theme.spacing.unit,
+    paddingRight: theme.spacing.unit
   }
 });
 
