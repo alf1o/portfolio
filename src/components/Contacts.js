@@ -12,7 +12,7 @@ import Code from '@material-ui/icons/Code';
 /**
   Render the contacts view.
 */
-// TODO: each contact should be a `Link`
+// TODO: style links
 function Contacts() {
   return (
     <Paper>
@@ -21,24 +21,39 @@ function Contacts() {
       >
         Thanks for thinking about getting in contact.
       </Typography>
+      <Typography>
+        You can reach out via:
+      </Typography>
       <List>
-        <ListItem>
-          <ListItemIcon>
-            <Mail />
-          </ListItemIcon>
-          <ListItemText primary="alfioparisi.93@gmail.com" />
-        </ListItem>
         <ListItem>
           <ListItemIcon>
             <Work />
           </ListItemIcon>
-          <ListItemText primary="LinkedIn" />
+          <ListItemText
+            primary={
+              <a href="https://uk.linkedin.com/in/alfio-parisi-2b3baa13b">
+                Linkedin
+              </a>
+            }
+          />
         </ListItem>
         <ListItem>
           <ListItemIcon>
             <Code />
           </ListItemIcon>
-          <ListItemText primary="GitHub" />
+          <ListItemText
+            primary={
+              <a href="https://github.com/alf1o">
+                GitHub
+              </a>
+            }
+          />
+        </ListItem>
+        <ListItem>
+          <ListItemIcon>
+            <Mail />
+          </ListItemIcon>
+          <ListItemText primary="alfioparisi.93@gmail.com" />
         </ListItem>
       </List>
     </Paper>
