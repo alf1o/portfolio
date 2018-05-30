@@ -36,7 +36,7 @@ const styles = theme => ({
 /**
   Render an avatar image and some background text.
 */
-// TODO: text
+// TODO: image
 function About({ classes, text }) {
   return (
     <Paper

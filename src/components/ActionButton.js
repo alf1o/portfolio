@@ -9,11 +9,11 @@ import { withStyles } from '@material-ui/core/styles';
 
 const styles = theme => ({
   trigger: {
-    position: 'absolute',
+    position: 'fixed',
     backgroundColor: theme.palette.primary.main
   },
   actions: {
-    position: 'absolute',
+    position: 'fixed',
     transition: 'bottom, right 300ms ease-out',
     backgroundColor: '#fff'
   }
