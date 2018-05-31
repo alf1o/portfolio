@@ -18,6 +18,7 @@ const styles = theme => ({
   },
   img: {
     margin: 'auto',
+    marginBottom: '5px',
     width: '22vmin',
     height: '22vmin'
   },

@@ -19,8 +19,10 @@ const styles = theme => ({
     width: '100vw',
     height: '100%',
     lineHeight: 1.6,
+    height: '100%',
+    maxWidth: '900px',
     [theme.breakpoints.up('md')]: {
-      width: '100%'
+      margin: '5px auto 0 auto'
     }
   },
   avatar: {
@@ -37,11 +39,11 @@ const styles = theme => ({
 /**
   Render a single project.
 */
-// TODO: open link icon is a `Link`
 function Project({ classes, project }) {
   return (
     <Card
       className={classes.card}
+      elevation={0}
     >
       <CardHeader
         avatar={

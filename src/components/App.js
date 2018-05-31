@@ -20,7 +20,6 @@ const styles = theme => ({
   }
 });
 
-// TODO: make home page
 class App extends Component {
 
   static propTypes = {
@@ -58,6 +57,7 @@ class App extends Component {
           />
           <Paper
             className={classes.routesContainer}
+            elevation={0}
           >
             <Routes
               repos={repos}

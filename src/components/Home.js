@@ -6,7 +6,7 @@ import Button from '@material-ui/core/Button';
 import { Link } from 'react-router-dom';
 import { withStyles } from '@material-ui/core/styles';
 
-const styles = {
+const styles = theme => ({
   container: {
     height: '100%',
     textAlign: 'center',
@@ -24,8 +24,11 @@ const styles = {
   },
   btn: {
     margin: '0 auto'
+  },
+  btnText: {
+    color: theme.palette.secondary.main
   }
-};
+});
 
 function Home({ classes }) {
   return (
@@ -49,6 +52,7 @@ function Home({ classes }) {
         to="/projects/Arcade Game"
         variant="raised"
         color="primary"
+        classes={{ label: classes.btnText }}
         className={classes.btn}
       >
         Explore

@@ -55,7 +55,7 @@ const routes = [
   },
   {
     name: 'Projects',
-    path: '/projects'
+    path: '/projects/Arcade Game'
   },
   {
     name: 'Contacts',

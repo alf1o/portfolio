@@ -26,6 +26,7 @@ function Header({ onMenuClick }) {
         </IconButton>
         <Typography
           variant="title"
+          color="secondary"
         >
           Alfio Parisi
         </Typography>
