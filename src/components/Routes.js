@@ -35,7 +35,7 @@ function Routes({ repos, text }) {
             />
             {repos.map(repo => (
               <Route key={repo.name}
-                path={`${match.url}projects/${repo.name}`}
+                path={`/portfolio/projects/${repo.name}`}
                 render={match => (
                   <Project
                     project={repo}
