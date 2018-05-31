@@ -4,6 +4,7 @@ import Paper from '@material-ui/core/Paper';
 import Avatar from '@material-ui/core/Avatar';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
+import profilePic from '../imgs/profile_pic-min.jpg';
 
 const styles = theme => ({
   container: {
@@ -37,7 +38,6 @@ const styles = theme => ({
 /**
   Render an avatar image and some background text.
 */
-// TODO: image
 function About({ classes, text }) {
   return (
     <Paper
@@ -49,14 +49,10 @@ function About({ classes, text }) {
         elevation={0}
       >
         <Avatar
-          alt=""
-          src=""
-          srcSet=""
-          sizes=""
+          alt="Alfio's profile picture"
+          src={profilePic}
           className={classes.img}
-        >
-          A
-        </Avatar>
+        />
         <Typography
           variant="caption"
         >
