@@ -52,7 +52,7 @@ const styles = theme => ({
 const routes = [
   {
     name: 'Home',
-    path: '/portfolio'
+    path: '/portfolio/'
   },
   {
     name: 'Projects',
