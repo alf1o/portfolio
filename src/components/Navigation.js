@@ -48,22 +48,23 @@ const styles = theme => ({
   }
 });
 
+// TODO: fix routes
 const routes = [
   {
     name: 'Home',
-    path: '/'
+    path: '/portfolio'
   },
   {
     name: 'Projects',
-    path: '/projects/Arcade Game'
+    path: '/portfolio/projects/Arcade Game'
   },
   {
     name: 'Contacts',
-    path: '/contacts'
+    path: '/portfolio/contacts'
   },
   {
     name: 'About',
-    path: '/about'
+    path: '/portfolio/about'
   }
 ];
 

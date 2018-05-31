@@ -36,7 +36,7 @@ const styles = theme => ({
   }
 });
 
-function Home({ classes }) {
+function Home({ classes, match }) {
   return (
     <Paper
       className={classes.container}
@@ -55,7 +55,7 @@ function Home({ classes }) {
       </Typography>
       <Button
         component={Link}
-        to="/projects/Arcade Game"
+        to={`${match.url}projects/Arcade Game`}
         variant="raised"
         color="primary"
         classes={{ label: classes.btnText }}
@@ -68,7 +68,8 @@ function Home({ classes }) {
 }
 
 Home.propTypes = {
-  classes: PropTypes.object.isRequired
+  classes: PropTypes.object.isRequired,
+  match: PropTypes.object.isRequired
 };
 
 export { Home };
