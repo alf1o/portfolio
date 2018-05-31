@@ -12,21 +12,21 @@ function Routes({ repos, text }) {
     <Switch>
       <Route
         exact={true}
-        path="/"
+        path="/portfolio"
         component={Home}
       />
       <Route
-        path="/contacts"
+        path="/portfolio/contacts"
         component={Contacts}
       />
       <Route
-        path="/about"
+        path="/portfolio/about"
         render={match => (
           <About text={text} />
         )}
       />
       <Route
-        path="/projects"
+        path="/portfolio/projects"
         render={match => (
           <Fragment>
             <ProjectTabs
@@ -35,7 +35,7 @@ function Routes({ repos, text }) {
             />
             {repos.map(repo => (
               <Route key={repo.name}
-                path={`/projects/${repo.name}`}
+                path={`${match.url}projects/${repo.name}`}
                 render={match => (
                   <Project
                     project={repo}
