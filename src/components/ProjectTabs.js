@@ -22,6 +22,7 @@ class ProjectTabs extends Component {
 
   static propTypes = {
     classes: PropTypes.object.isRequired,
+    match: PropTypes.object.isRequired,
     projects: PropTypes.array.isRequired
   };
 
@@ -38,7 +39,7 @@ class ProjectTabs extends Component {
   }
 
   render() {
-    const { classes, projects } = this.props;
+    const { classes, match, projects } = this.props;
     const { currentTab } = this.state;
     return (
       <AppBar
@@ -55,7 +56,7 @@ class ProjectTabs extends Component {
           {projects.map(project => (
             <Tab key={project.name}
               component={Link}
-              to={project.name}
+              to={`${match.match.url}/${project.name}`}
               label={project.name}
             />
           ))}

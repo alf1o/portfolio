@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
+import Home from './Home';
 import Contacts from './Contacts';
 import About from './About';
 import ProjectTabs from './ProjectTabs';
@@ -9,6 +10,11 @@ import { Switch, Route } from 'react-router-dom';
 function Routes({ repos, text }) {
   return (
     <Switch>
+      <Route
+        exact={true}
+        path="/"
+        component={Home}
+      />
       <Route
         path="/contacts"
         component={Contacts}
@@ -20,13 +26,16 @@ function Routes({ repos, text }) {
         )}
       />
       <Route
-        path="/"
+        path="/projects"
         render={match => (
           <Fragment>
-            <ProjectTabs projects={repos} />
+            <ProjectTabs
+              match={match}
+              projects={repos}
+            />
             {repos.map(repo => (
               <Route key={repo.name}
-                path={`/${repo.name}`}
+                path={`/projects/${repo.name}`}
                 render={match => (
                   <Project
                     project={repo}

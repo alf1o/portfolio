@@ -54,6 +54,10 @@ const routes = [
     path: '/'
   },
   {
+    name: 'Projects',
+    path: '/projects'
+  },
+  {
     name: 'Contacts',
     path: '/contacts'
   },
