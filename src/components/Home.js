@@ -17,10 +17,16 @@ const styles = theme => ({
   },
   topText: {
     marginBottom: '5%',
-    marginTop: '-12%'
+    marginTop: '-30%',
+    [theme.breakpoints.up('sm')]: {
+      marginTop: '-15%'
+    }
   },
   bottomText: {
-    marginBottom: '5%'
+    marginBottom: '15%',
+    [theme.breakpoints.up('sm')]: {
+      marginBottom: '5%'
+    }
   },
   btn: {
     margin: '0 auto'

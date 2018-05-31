@@ -15,18 +15,23 @@ import { withStyles } from '@material-ui/core/styles';
 const styles = theme => ({
   container: {
     padding: theme.spacing.unit * 2,
-    height: '100%'
+    height: '100%',
+    maxWidth: '900px',
+    margin: '0 auto'
+  },
+  linkIcon: {
+    color: theme.palette.primary.dark
   }
 });
 
 /**
   Render the contacts view.
 */
-// TODO: style links
 function Contacts({ classes }) {
   return (
     <Paper
       className={classes.container}
+      elevation={0}
     >
       <Typography
         variant="subheading"
@@ -40,16 +45,19 @@ function Contacts({ classes }) {
         <ListItem
           component="a"
           href="https://uk.linkedin.com/in/alfio-parisi-2b3baa13b"
-          className={classes.link}
         >
           <ListItemIcon>
-            <Work />
+            <Work
+              className={classes.linkIcon}
+            />
           </ListItemIcon>
           <ListItemText
             primary="Linkedin"
           />
           <ListItemIcon>
-            <Link />
+            <Link
+              className={classes.linkIcon}
+            />
           </ListItemIcon>
         </ListItem>
         <ListItem
@@ -57,18 +65,24 @@ function Contacts({ classes }) {
           href="https://github.com/alf1o"
         >
           <ListItemIcon>
-            <Code />
+            <Code
+              className={classes.linkIcon}
+            />
           </ListItemIcon>
           <ListItemText
             primary="GitHub"
           />
           <ListItemIcon>
-            <Link />
+            <Link
+              className={classes.linkIcon}
+            />
           </ListItemIcon>
         </ListItem>
         <ListItem>
           <ListItemIcon>
-            <Mail />
+            <Mail
+              className={classes.linkIcon}
+            />
           </ListItemIcon>
           <ListItemText primary="Email: alfioparisi.93@gmail.com" />
         </ListItem>

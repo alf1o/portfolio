@@ -19,7 +19,6 @@ const styles = theme => ({
     width: '100vw',
     height: '100%',
     lineHeight: 1.6,
-    height: '100%',
     maxWidth: '900px',
     [theme.breakpoints.up('md')]: {
       margin: '5px auto 0 auto'
@@ -33,6 +32,9 @@ const styles = theme => ({
     [theme.breakpoints.down('md')]: {
       fontSize: theme.typography.fontSize + 1
     }
+  },
+  star: {
+    color: theme.palette.primary.dark
   }
 });
 
@@ -84,7 +86,9 @@ function Project({ classes, project }) {
           {project.features.map(feature => (
             <ListItem key={feature}>
               <ListItemIcon>
-                <StarIcon />
+                <StarIcon
+                  className={classes.star}
+                />
               </ListItemIcon>
               <ListItemText primary={feature} />
             </ListItem>

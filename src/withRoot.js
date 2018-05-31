@@ -1,20 +1,19 @@
 import React from 'react';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import lightBlue from '@material-ui/core/colors/lightBlue';
 
 // `theme` object to customize MaterialUI default theme.
 const theme = createMuiTheme({
   palette: {
     primary: {
-      light: '#73e8ff',
-      main: lightBlue[400],
-      dark: '#0086c3'
+      light: '#64ffff',
+      main: '#00cccc',
+      dark: '#009a9b'
     },
     secondary: {
       light: '#ffffff',
-      main: lightBlue[50],
-      dark: '#afc2cb'
+      main: '#ffffff',
+      dark: '#cccccc'
     }
   }
 });
