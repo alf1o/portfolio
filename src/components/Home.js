@@ -55,7 +55,7 @@ function Home({ classes, match }) {
       </Typography>
       <Button
         component={Link}
-        to={`${match.url}projects/Arcade Game`}
+        to="/projects/Arcade Game"
         variant="raised"
         color="primary"
         classes={{ label: classes.btnText }}

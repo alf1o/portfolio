@@ -52,19 +52,19 @@ const styles = theme => ({
 const routes = [
   {
     name: 'Home',
-    path: '/portfolio/'
+    path: '/'
   },
   {
     name: 'Projects',
-    path: '/portfolio/projects/Arcade Game'
+    path: '/projects/Arcade Game'
   },
   {
     name: 'Contacts',
-    path: '/portfolio/contacts'
+    path: '/contacts'
   },
   {
     name: 'About',
-    path: '/portfolio/about'
+    path: '/about'
   }
 ];
 

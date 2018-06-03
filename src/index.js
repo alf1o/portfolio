@@ -7,7 +7,9 @@ import text from './utils/aboutText';
 // import registerServiceWorker from './registerServiceWorker';
 
 ReactDOM.render(
-  <BrowserRouter>
+  <BrowserRouter
+    basename={process.env.PUBLIC_URL}
+  >
     <App
       repos={Object.values(repos)}
       text={text}
