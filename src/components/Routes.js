@@ -5,6 +5,7 @@ import Contacts from './Contacts';
 import About from './About';
 import ProjectTabs from './ProjectTabs';
 import Project from './Project';
+import NotFound from './NotFound';
 import { Switch, Route } from 'react-router-dom';
 
 function Routes({ repos, text }) {
@@ -45,6 +46,9 @@ function Routes({ repos, text }) {
             ))}
           </Fragment>
         )}
+      />
+      <Route
+        component={NotFound}
       />
     </Switch>
   );
