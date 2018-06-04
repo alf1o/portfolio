@@ -1,0 +1,111 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`\`Project\` should match snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <WithStyles(Project)
+    classes={
+        Object {
+            "avatar": "",
+            "card": "",
+            "description": "",
+            "star": "",
+          }
+    }
+    project={
+        Object {
+            "description": "test description",
+            "features": Array [
+              "to",
+              "test",
+              "or",
+              "not",
+              "to",
+              "test",
+            ],
+            "icon": "T",
+            "name": "test",
+            "url": "test.com",
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "classes": Object {
+        "avatar": "Project-avatar-2",
+        "card": "Project-card-1",
+        "description": "Project-description-3",
+        "star": "Project-star-4",
+      },
+      "project": Object {
+        "description": "test description",
+        "features": Array [
+          "to",
+          "test",
+          "or",
+          "not",
+          "to",
+          "test",
+        ],
+        "icon": "T",
+        "name": "test",
+        "url": "test.com",
+      },
+    },
+    "ref": null,
+    "rendered": null,
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "classes": Object {
+          "avatar": "Project-avatar-2",
+          "card": "Project-card-1",
+          "description": "Project-description-3",
+          "star": "Project-star-4",
+        },
+        "project": Object {
+          "description": "test description",
+          "features": Array [
+            "to",
+            "test",
+            "or",
+            "not",
+            "to",
+            "test",
+          ],
+          "icon": "T",
+          "name": "test",
+          "url": "test.com",
+        },
+      },
+      "ref": null,
+      "rendered": null,
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+    "context": Object {},
+  },
+}
+`;
