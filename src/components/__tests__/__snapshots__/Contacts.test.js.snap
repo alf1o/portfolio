@@ -1,0 +1,788 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`\`Contacts\` should match snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Contacts
+    classes={
+        Object {
+            "container": Object {},
+            "linkIcon": Object {},
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "children": Array [
+        <WithStyles(Typography)
+          variant="subheading"
+>
+          Thanks for thinking about getting in contact.
+</WithStyles(Typography)>,
+        <WithStyles(Typography)>
+          You can reach out via:
+</WithStyles(Typography)>,
+        <WithStyles(List)>
+          <WithStyles(ListItem)
+                    component="a"
+                    href="https://uk.linkedin.com/in/alfio-parisi-2b3baa13b"
+          >
+                    <WithStyles(ListItemIcon)>
+                              <pure(Work)
+                                        className={Object {}}
+                              />
+                    </WithStyles(ListItemIcon)>
+                    <WithStyles(ListItemText)
+                              primary="Linkedin"
+                    />
+                    <WithStyles(ListItemIcon)>
+                              <pure(Link)
+                                        className={Object {}}
+                              />
+                    </WithStyles(ListItemIcon)>
+          </WithStyles(ListItem)>
+          <WithStyles(ListItem)
+                    component="a"
+                    href="https://github.com/alf1o"
+          >
+                    <WithStyles(ListItemIcon)>
+                              <pure(Code)
+                                        className={Object {}}
+                              />
+                    </WithStyles(ListItemIcon)>
+                    <WithStyles(ListItemText)
+                              primary="GitHub"
+                    />
+                    <WithStyles(ListItemIcon)>
+                              <pure(Link)
+                                        className={Object {}}
+                              />
+                    </WithStyles(ListItemIcon)>
+          </WithStyles(ListItem)>
+          <WithStyles(ListItem)>
+                    <WithStyles(ListItemIcon)>
+                              <pure(Mail)
+                                        className={Object {}}
+                              />
+                    </WithStyles(ListItemIcon)>
+                    <WithStyles(ListItemText)
+                              primary="Email: alfioparisi.93@gmail.com"
+                    />
+          </WithStyles(ListItem)>
+</WithStyles(List)>,
+      ],
+      "className": Object {},
+      "elevation": 0,
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": "Thanks for thinking about getting in contact.",
+          "variant": "subheading",
+        },
+        "ref": null,
+        "rendered": "Thanks for thinking about getting in contact.",
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": "You can reach out via:",
+        },
+        "ref": null,
+        "rendered": "You can reach out via:",
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": Array [
+            <WithStyles(ListItem)
+              component="a"
+              href="https://uk.linkedin.com/in/alfio-parisi-2b3baa13b"
+>
+              <WithStyles(ListItemIcon)>
+                            <pure(Work)
+                                          className={Object {}}
+                            />
+              </WithStyles(ListItemIcon)>
+              <WithStyles(ListItemText)
+                            primary="Linkedin"
+              />
+              <WithStyles(ListItemIcon)>
+                            <pure(Link)
+                                          className={Object {}}
+                            />
+              </WithStyles(ListItemIcon)>
+</WithStyles(ListItem)>,
+            <WithStyles(ListItem)
+              component="a"
+              href="https://github.com/alf1o"
+>
+              <WithStyles(ListItemIcon)>
+                            <pure(Code)
+                                          className={Object {}}
+                            />
+              </WithStyles(ListItemIcon)>
+              <WithStyles(ListItemText)
+                            primary="GitHub"
+              />
+              <WithStyles(ListItemIcon)>
+                            <pure(Link)
+                                          className={Object {}}
+                            />
+              </WithStyles(ListItemIcon)>
+</WithStyles(ListItem)>,
+            <WithStyles(ListItem)>
+              <WithStyles(ListItemIcon)>
+                            <pure(Mail)
+                                          className={Object {}}
+                            />
+              </WithStyles(ListItemIcon)>
+              <WithStyles(ListItemText)
+                            primary="Email: alfioparisi.93@gmail.com"
+              />
+</WithStyles(ListItem)>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": Array [
+                <WithStyles(ListItemIcon)>
+                  <pure(Work)
+                                    className={Object {}}
+                  />
+</WithStyles(ListItemIcon)>,
+                <WithStyles(ListItemText)
+                  primary="Linkedin"
+/>,
+                <WithStyles(ListItemIcon)>
+                  <pure(Link)
+                                    className={Object {}}
+                  />
+</WithStyles(ListItemIcon)>,
+              ],
+              "component": "a",
+              "href": "https://uk.linkedin.com/in/alfio-parisi-2b3baa13b",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": <pure(Work)
+                    className={Object {}}
+/>,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "className": Object {},
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "primary": "Linkedin",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": <pure(Link)
+                    className={Object {}}
+/>,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "className": Object {},
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                "type": [Function],
+              },
+            ],
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": Array [
+                <WithStyles(ListItemIcon)>
+                  <pure(Code)
+                                    className={Object {}}
+                  />
+</WithStyles(ListItemIcon)>,
+                <WithStyles(ListItemText)
+                  primary="GitHub"
+/>,
+                <WithStyles(ListItemIcon)>
+                  <pure(Link)
+                                    className={Object {}}
+                  />
+</WithStyles(ListItemIcon)>,
+              ],
+              "component": "a",
+              "href": "https://github.com/alf1o",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": <pure(Code)
+                    className={Object {}}
+/>,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "className": Object {},
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "primary": "GitHub",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": <pure(Link)
+                    className={Object {}}
+/>,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "className": Object {},
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                "type": [Function],
+              },
+            ],
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": Array [
+                <WithStyles(ListItemIcon)>
+                  <pure(Mail)
+                                    className={Object {}}
+                  />
+</WithStyles(ListItemIcon)>,
+                <WithStyles(ListItemText)
+                  primary="Email: alfioparisi.93@gmail.com"
+/>,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": <pure(Mail)
+                    className={Object {}}
+/>,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "className": Object {},
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "primary": "Email: alfioparisi.93@gmail.com",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+            ],
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+    ],
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": Array [
+          <WithStyles(Typography)
+            variant="subheading"
+>
+            Thanks for thinking about getting in contact.
+</WithStyles(Typography)>,
+          <WithStyles(Typography)>
+            You can reach out via:
+</WithStyles(Typography)>,
+          <WithStyles(List)>
+            <WithStyles(ListItem)
+                        component="a"
+                        href="https://uk.linkedin.com/in/alfio-parisi-2b3baa13b"
+            >
+                        <WithStyles(ListItemIcon)>
+                                    <pure(Work)
+                                                className={Object {}}
+                                    />
+                        </WithStyles(ListItemIcon)>
+                        <WithStyles(ListItemText)
+                                    primary="Linkedin"
+                        />
+                        <WithStyles(ListItemIcon)>
+                                    <pure(Link)
+                                                className={Object {}}
+                                    />
+                        </WithStyles(ListItemIcon)>
+            </WithStyles(ListItem)>
+            <WithStyles(ListItem)
+                        component="a"
+                        href="https://github.com/alf1o"
+            >
+                        <WithStyles(ListItemIcon)>
+                                    <pure(Code)
+                                                className={Object {}}
+                                    />
+                        </WithStyles(ListItemIcon)>
+                        <WithStyles(ListItemText)
+                                    primary="GitHub"
+                        />
+                        <WithStyles(ListItemIcon)>
+                                    <pure(Link)
+                                                className={Object {}}
+                                    />
+                        </WithStyles(ListItemIcon)>
+            </WithStyles(ListItem)>
+            <WithStyles(ListItem)>
+                        <WithStyles(ListItemIcon)>
+                                    <pure(Mail)
+                                                className={Object {}}
+                                    />
+                        </WithStyles(ListItemIcon)>
+                        <WithStyles(ListItemText)
+                                    primary="Email: alfioparisi.93@gmail.com"
+                        />
+            </WithStyles(ListItem)>
+</WithStyles(List)>,
+        ],
+        "className": Object {},
+        "elevation": 0,
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": "Thanks for thinking about getting in contact.",
+            "variant": "subheading",
+          },
+          "ref": null,
+          "rendered": "Thanks for thinking about getting in contact.",
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": "You can reach out via:",
+          },
+          "ref": null,
+          "rendered": "You can reach out via:",
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": Array [
+              <WithStyles(ListItem)
+                component="a"
+                href="https://uk.linkedin.com/in/alfio-parisi-2b3baa13b"
+>
+                <WithStyles(ListItemIcon)>
+                                <pure(Work)
+                                                className={Object {}}
+                                />
+                </WithStyles(ListItemIcon)>
+                <WithStyles(ListItemText)
+                                primary="Linkedin"
+                />
+                <WithStyles(ListItemIcon)>
+                                <pure(Link)
+                                                className={Object {}}
+                                />
+                </WithStyles(ListItemIcon)>
+</WithStyles(ListItem)>,
+              <WithStyles(ListItem)
+                component="a"
+                href="https://github.com/alf1o"
+>
+                <WithStyles(ListItemIcon)>
+                                <pure(Code)
+                                                className={Object {}}
+                                />
+                </WithStyles(ListItemIcon)>
+                <WithStyles(ListItemText)
+                                primary="GitHub"
+                />
+                <WithStyles(ListItemIcon)>
+                                <pure(Link)
+                                                className={Object {}}
+                                />
+                </WithStyles(ListItemIcon)>
+</WithStyles(ListItem)>,
+              <WithStyles(ListItem)>
+                <WithStyles(ListItemIcon)>
+                                <pure(Mail)
+                                                className={Object {}}
+                                />
+                </WithStyles(ListItemIcon)>
+                <WithStyles(ListItemText)
+                                primary="Email: alfioparisi.93@gmail.com"
+                />
+</WithStyles(ListItem)>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": Array [
+                  <WithStyles(ListItemIcon)>
+                    <pure(Work)
+                                        className={Object {}}
+                    />
+</WithStyles(ListItemIcon)>,
+                  <WithStyles(ListItemText)
+                    primary="Linkedin"
+/>,
+                  <WithStyles(ListItemIcon)>
+                    <pure(Link)
+                                        className={Object {}}
+                    />
+</WithStyles(ListItemIcon)>,
+                ],
+                "component": "a",
+                "href": "https://uk.linkedin.com/in/alfio-parisi-2b3baa13b",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "children": <pure(Work)
+                      className={Object {}}
+/>,
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "className": Object {},
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "primary": "Linkedin",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "children": <pure(Link)
+                      className={Object {}}
+/>,
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "className": Object {},
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                  "type": [Function],
+                },
+              ],
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": Array [
+                  <WithStyles(ListItemIcon)>
+                    <pure(Code)
+                                        className={Object {}}
+                    />
+</WithStyles(ListItemIcon)>,
+                  <WithStyles(ListItemText)
+                    primary="GitHub"
+/>,
+                  <WithStyles(ListItemIcon)>
+                    <pure(Link)
+                                        className={Object {}}
+                    />
+</WithStyles(ListItemIcon)>,
+                ],
+                "component": "a",
+                "href": "https://github.com/alf1o",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "children": <pure(Code)
+                      className={Object {}}
+/>,
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "className": Object {},
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "primary": "GitHub",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "children": <pure(Link)
+                      className={Object {}}
+/>,
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "className": Object {},
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                  "type": [Function],
+                },
+              ],
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": Array [
+                  <WithStyles(ListItemIcon)>
+                    <pure(Mail)
+                                        className={Object {}}
+                    />
+</WithStyles(ListItemIcon)>,
+                  <WithStyles(ListItemText)
+                    primary="Email: alfioparisi.93@gmail.com"
+/>,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "children": <pure(Mail)
+                      className={Object {}}
+/>,
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "className": Object {},
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "primary": "Email: alfioparisi.93@gmail.com",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+              ],
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+      ],
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
