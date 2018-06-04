@@ -36,6 +36,9 @@ const styles = theme => ({
   }
 });
 
+/**
+  Render a title and a button to start navigation.
+*/
 function Home({ classes, match }) {
   return (
     <Paper
