@@ -1,0 +1,275 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`\`App\` shoud match snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <App
+    classes={
+        Object {
+            "container": "",
+            "routesContainer": "",
+          }
+    }
+    repos={Array []}
+    text="Test text"
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "children": Array [
+        <Header
+          onMenuClick={[Function]}
+/>,
+        <WithStyles(Paper)
+          className=""
+>
+          <WithStyles(Navigation)
+                    isOpen={false}
+                    onDrawerSwipe={[Function]}
+          />
+          <WithStyles(Paper)
+                    className=""
+                    elevation={0}
+          >
+                    <Routes
+                              repos={Array []}
+                              text="Test text"
+                    />
+          </WithStyles(Paper)>
+</WithStyles(Paper)>,
+        <ButtonsContainer />,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "onMenuClick": [Function],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": Array [
+            <WithStyles(Navigation)
+              isOpen={false}
+              onDrawerSwipe={[Function]}
+/>,
+            <WithStyles(Paper)
+              className=""
+              elevation={0}
+>
+              <Routes
+                            repos={Array []}
+                            text="Test text"
+              />
+</WithStyles(Paper)>,
+          ],
+          "className": "",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "isOpen": false,
+              "onDrawerSwipe": [Function],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": <Routes
+                repos={Array []}
+                text="Test text"
+/>,
+              "className": "",
+              "elevation": 0,
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "repos": Array [],
+                "text": "Test text",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": Symbol(react.fragment),
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": Array [
+          <Header
+            onMenuClick={[Function]}
+/>,
+          <WithStyles(Paper)
+            className=""
+>
+            <WithStyles(Navigation)
+                        isOpen={false}
+                        onDrawerSwipe={[Function]}
+            />
+            <WithStyles(Paper)
+                        className=""
+                        elevation={0}
+            >
+                        <Routes
+                                    repos={Array []}
+                                    text="Test text"
+                        />
+            </WithStyles(Paper)>
+</WithStyles(Paper)>,
+          <ButtonsContainer />,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "onMenuClick": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": Array [
+              <WithStyles(Navigation)
+                isOpen={false}
+                onDrawerSwipe={[Function]}
+/>,
+              <WithStyles(Paper)
+                className=""
+                elevation={0}
+>
+                <Routes
+                                repos={Array []}
+                                text="Test text"
+                />
+</WithStyles(Paper)>,
+            ],
+            "className": "",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "isOpen": false,
+                "onDrawerSwipe": [Function],
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": <Routes
+                  repos={Array []}
+                  text="Test text"
+/>,
+                "className": "",
+                "elevation": 0,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "repos": Array [],
+                  "text": "Test text",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": Symbol(react.fragment),
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+    "context": Object {},
+  },
+}
+`;
