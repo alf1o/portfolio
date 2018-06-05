@@ -77,6 +77,7 @@ function Navigation({ classes, onDrawerSwipe, isOpen }) {
   const drawer = (
     <List
       className={classes.list}
+      component="nav"
     >
       {routes.map(route => (
         <ListItem key={route.name}
